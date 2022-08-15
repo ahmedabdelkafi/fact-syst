@@ -2421,7 +2421,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Provides  to manage errors and ease debugging PHP code",
+            "description": "Provides tools to manage errors and ease debugging PHP code",
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/error-handler/tree/v5.4.11"
