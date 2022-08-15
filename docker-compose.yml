@@ -6,7 +6,6 @@ x-app: &app
     args:
       UID: ${UID}
       GID: ${GID}
-      BASE_PHP_TAG: ${BASE_PHP_TAG}
   env_file:
     - docker-compose.env
   environment:
@@ -15,6 +14,7 @@ x-app: &app
     - "8080"
   volumes:
     - ./:/var/www/app
+  restart: on-failure
 
 services:
   app:

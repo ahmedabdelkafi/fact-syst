@@ -24,7 +24,7 @@ RUN set -xe; \
 
 USER www-data
 
-COPY composer.json composer.lock "${APP_ROOT}/"
+COPY composer.json composer.lock "${APP_ROOT}"/
 
 RUN set -xe; \
     composer validate --no-interaction --quiet; \
