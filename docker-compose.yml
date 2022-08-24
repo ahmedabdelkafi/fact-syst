@@ -46,15 +46,14 @@ services:
   database:
     image: mysql:5.7
     environment:
-       
-       MYSQL_ROOT_PASSWORD: 
+       container_name: database
+       MYSQL_ROOT_PASSWORD: root 
        MYSQL_DATABASE: medtn
        MYSQL_USER: medtn
        MYSQL_PASSWORD: medtn
       
-    expose:
-      # Opens port 3306 on the container
-      - '3306'  
+    ports:
+      - '4306:3306'  
     volumes:
       - db-data:/var/lib/mysql
     restart: always
