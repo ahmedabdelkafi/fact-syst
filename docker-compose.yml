@@ -41,3 +41,26 @@ services:
     env_file:
       - docker-compose.env
       - .env.test
+
+###> doctrine/doctrine-bundle ###
+  database:
+    image: mysql:5.7
+    environment:
+       MYSQL_ROOT_PASSWORD: 
+       MYSQL_DATABASE: medtn
+       MYSQL_USER: root
+       MYSQL_PASSWORD:
+    expose:
+      # Opens port 3306 on the container
+      - '3306'  
+    volumes:
+      - db-data:/var/lib/mysql
+    restart: always
+      # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
+      # - ./docker/db/data:/var/lib/postgresql/data:rw
+###< doctrine/doctrine-bundle ###
+
+volumes:
+###> doctrine/doctrine-bundle ###
+  db-data:
+###< doctrine/doctrine-bundle ###
